@@ -3,10 +3,10 @@
   
 # Theoretical Calculations
   While there are many ways to classify an image for digit recognition, the Euclidean distance is chosen due to its simplicity. The Euclidean distance can be defined as </br>
-<div align="center><a href="https://www.codecogs.com/eqnedit.php?latex=d&space;=&space;\sqrt{(x_2-x_1)^2&plus;(y_2-y_1)^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?d&space;=&space;\sqrt{(x_2-x_1)^2&plus;(y_2-y_1)^2}" title="d = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}" /></a></br>
+<div style="text-align:center"><a href="https://www.codecogs.com/eqnedit.php?latex=d&space;=&space;\sqrt{(x_2-x_1)^2&plus;(y_2-y_1)^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?d&space;=&space;\sqrt{(x_2-x_1)^2&plus;(y_2-y_1)^2}" title="d = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}" /></a></div></br>
 In terms of the digit recognition program, the Euclidean distance equation can be rewritten to
 
- </br><a href="https://www.codecogs.com/eqnedit.php?latex=d&space;=&space;\sqrt{(testImages(:,:,idx_1)-trainImages(:,:,idx_2))^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?d&space;=&space;\sqrt{(testImages(:,:,idx_1)-trainImages(:,:,idx_2))^2}" title="d = \sqrt{(testImages(:,:,idx_1)-trainImages(:,:,idx_2))^2}" /></a></br>
+ </br><div style="text-align:center"><a href="https://www.codecogs.com/eqnedit.php?latex=d&space;=&space;\sqrt{(testImages(:,:,idx_1)-trainImages(:,:,idx_2))^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?d&space;=&space;\sqrt{(testImages(:,:,idx_1)-trainImages(:,:,idx_2))^2}" title="d = \sqrt{(testImages(:,:,idx_1)-trainImages(:,:,idx_2))^2}" /></a></div></br>
 where the length of the testing labels is idx_1 and the length of the training labels is idx_2.
 
 # Experimental Results
@@ -14,3 +14,6 @@ Overall, the program is a success, with the percent accuracy at 95%. As seen in 
 <div style="text-align:center"><img src="https://raw.githubusercontent.com/gabehoban/matlabCharRec/master/CorrectSolution.png" /></div>
 Figure 1 shows how the training image on the left correctly classified the testing image on the right as the number 9. While using the Euclidean distance is simple, it is not perfect. As seen in Figure 2, the program failed to differentiate the number 8 on the left to the number one on the right. By comparing the testLabel and the trainLabel, it can be determined if the digit recognition is accurate.
 <div style="text-align:center"><img src="https://raw.githubusercontent.com/gabehoban/matlabCharRec/master/IncorrectSolution.png" /></div>
+
+# Conclusion
+In this project, a set of data is split into two separate groups, one with 100 images and another with the other 4900 images. It is important to point out that from finding the minimum Euclidean distance for each number, it can be matched to a separate image in the testing images. In order to increase the accuracy of the program, it would need a much larger data set of images.
